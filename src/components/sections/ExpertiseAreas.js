@@ -1,7 +1,7 @@
 import React from 'react';
 
 const ExpertiseAreas = () => {
-  return <div>ExpertiseAreas</div>;
+  return <section>ExpertiseAreas</section>;
 };
 
 export default ExpertiseAreas;

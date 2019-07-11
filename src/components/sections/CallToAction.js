@@ -1,7 +1,7 @@
 import React from 'react';
 
 function CallToAction(props) {
-  return <div>CallToAction</div>;
+  return <section>CallToAction</section>;
 }
 
 export default CallToAction;

@@ -9,7 +9,7 @@ function App() {
   return (
     <Router>
       <Header />
-      <main id='main' className='site-main'>
+      <main role='main' className='site-main'>
         <Route
           render={({ location }) => (
             <Switch location={location}>
