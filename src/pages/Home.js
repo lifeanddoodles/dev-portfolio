@@ -1,8 +1,19 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
+import Hero from '../components/sections/Hero';
+import Portfolio from '../components/sections/Portfolio';
+import ExpertiseAreas from '../components/sections/ExpertiseAreas';
+import CallToAction from '../components/sections/CallToAction';
 
 class Home extends Component {
   render() {
-    return <h1>Home</h1>;
+    return (
+      <Fragment>
+        <Hero />
+        <Portfolio />
+        <ExpertiseAreas />
+        <CallToAction />
+      </Fragment>
+    );
   }
 }
 

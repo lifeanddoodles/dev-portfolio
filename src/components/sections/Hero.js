@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-const Hero = () => {
-  return <div>Hero</div>;
-};
+class Hero extends Component {
+  render() {
+    return <div>Hero</div>;
+  }
+}
 
 export default Hero;

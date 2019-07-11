@@ -1,12 +1,17 @@
-import React from 'react';
+import React, { Fragment } from 'react';
+import Home from './pages/Home';
+import Header from './components/main/Header';
+import Footer from './components/main/Footer';
 
 function App() {
   return (
-    <div className='App'>
-      <header className='App-header'>
-        <p>Header</p>
-      </header>
-    </div>
+    <Fragment>
+      <Header />
+      <main>
+        <Home />
+      </main>
+      <Footer />
+    </Fragment>
   );
 }
 
