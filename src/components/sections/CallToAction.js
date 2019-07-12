@@ -2,7 +2,7 @@ import React from 'react';
 
 function CallToAction(props) {
   return (
-    <section>
+    <section id='contact' className='bg-accent fullwidth'>
       <h2>Reach out</h2>
     </section>
   );
