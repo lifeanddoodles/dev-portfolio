@@ -1,7 +1,8 @@
 import React from 'react';
+import Expertise from './components/Expertise';
 
 const ExpertiseAreas = () => {
-  return <section>ExpertiseAreas</section>;
+  return <Expertise />;
 };
 
 export default ExpertiseAreas;
