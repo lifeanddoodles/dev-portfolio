@@ -6,8 +6,12 @@ class Hero extends Component {
   render() {
     return (
       <section id='hero'>
-        <About />
-        <Social />
+        <div className='container'>
+          <About />
+        </div>
+        <div className='container'>
+          <Social />
+        </div>
       </section>
     );
   }
