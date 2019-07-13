@@ -4,6 +4,7 @@ import Home from './pages/Home';
 import ErrorPage from './pages/ErrorPage';
 import Header from './components/main/Header';
 import Footer from './components/main/Footer';
+import './styles/index.css';
 
 function App() {
   return (
