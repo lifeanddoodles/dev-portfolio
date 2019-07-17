@@ -5,8 +5,6 @@ import ErrorPage from './pages/ErrorPage';
 import Header from './components/main/Header';
 import Footer from './components/main/Footer';
 import './styles/index.scss';
-// import './styles/index.css';
-// import '../../node_modules/bootstrap/scss/bootstrap.scss';
 
 function App() {
   return (
