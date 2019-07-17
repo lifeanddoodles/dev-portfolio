@@ -4,7 +4,9 @@ function Skill(props) {
   return (
     <li>
       <i className='icon' role='presentation' />
-      <h4>name</h4>
+      <h4 className='card-title' itemProp='name'>
+        name
+      </h4>
     </li>
   );
 }

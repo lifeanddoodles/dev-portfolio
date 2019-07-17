@@ -1,10 +1,100 @@
-$theme-colors: (
-primary: #4f8bdc,
-secondary: #4fbddc,
-success: #0a7c3a,
-info: #2150a9,
-warning: #fc9a5b,
-danger: #98210c,
-light: #f3f3f3,
-dark: #292929
-) !default;
+@import '_variables';
+
+// check contrast text color and bg color
+@function check-contrast($foreground, $background) {
+  $r: (max(red($foreground), red($background))) - (min(red($foreground), red($background)));
+  $g: (max(green($foreground), green($background))) - (min(green($foreground), green($background)));
+  $b: (max(blue($foreground), blue($background))) - (min(blue($foreground), blue($background)));
+  $sum-rgb: $r + $g + $b;
+
+  @if $sum-rgb < 500 {
+    // if false
+    @return "false";
+  } @else {
+    // true
+    // color:text-color;
+    @return "true";
+  }
+}
+
+
+@mixin adjust-color($background) {
+  $color-brightness: round((red($background) * 299) + (green($background) * 587) + (blue($background) * 114) / 1000);
+  $light-color: round((red(#ffffff) * 299) + (green(#ffffff) * 587) + (blue(#ffffff) * 114) / 1000);
+
+  @if abs($color-brightness) < ($light-color/2){
+    // if bg not light
+    // choose light text color
+    // check contrast light text color and bg color
+    $text-color: #f3f3f3;
+      // color: $text-color;
+    // @include lighten-color($text-color,$background);
+    color:lighten-color($text-color,$background);
+    // @while (check-contrast($text-color, $background) == "false") {
+    //   // color: $text-color;
+    //   $text-color: lighten($text-color, 1%);
+    //   @if (check-contrast($text-color, $background) == "true") {
+    //     color: $text-color;
+    //   }
+    // }
+  }
+
+  @else {
+    // else (if bg light)
+    // choose dark text color
+    // check contrast dark text color and bg color
+    // @include darken-color($text-color,$background);
+    color:darken-color($text-color,$background);
+    // @while (check-contrast($text-color, $background) == "false") {
+    //   // color: $text-color;
+    //   $text-color: darken($text-color, 1%);
+    //   @if (check-contrast($text-color, $background) == "true") {
+    //     color: $text-color;
+    //   }
+    // }
+  }
+}
+
+
+@function lighten-color($text-color,$background){
+  @while (check-contrast($text-color, $background) == "false") {
+    // color: $text-color;
+    $text-color: lighten($text-color, 1%);
+  }
+  // @if (check-contrast($text-color, $background) == "true") {
+  //   @return $text-color;
+  // }
+  @return $text-color;
+}
+
+@function darken-color($text-color,$background){
+  @while (check-contrast($text-color, $background) == "false") {
+    // color: $text-color;
+    $text-color: darken($text-color, 1%);
+
+  }
+  // @if (check-contrast($text-color, $background) == "true") {
+  //   @return $text-color;
+  // }
+  @return $text-color;
+}
+
+.bg-accent {
+  background-color: $accent;
+}
+
+// $text-color: #292929;
+.btn.btn-primary {
+  background-color: #4f8bdc;
+  // @include adjust-color(#666666);
+  // color:lighten-color($text-color,#4f8bdc);
+}
+.btn.btn-accent {
+  background-color: $accent;
+  // @include adjust-color($accent);
+}
+.btn-accent {
+  &:hover {
+    background-color: #f9711a;
+  }
+}

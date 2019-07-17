@@ -1,13 +1,14 @@
 import React from 'react';
 import Expertise from './components/Expertise';
 
-const ExpertiseAreas = () => {
+function ExpertiseAreas(props) {
+  const expertiseAreas = <h2>Skills</h2>;
   return (
     <section id='skills'>
-      <h2>Skills</h2>
+      {expertiseAreas}
       <Expertise />
     </section>
   );
-};
+}
 
 export default ExpertiseAreas;

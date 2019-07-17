@@ -11,7 +11,6 @@ class Navigation extends Component {
         <NavLink smooth className='nav-item nav-link' to='#portfolio'>
           Portfolio
         </NavLink>
-
         <NavLink smooth className='nav-item nav-link' to='#skills'>
           Skills
         </NavLink>

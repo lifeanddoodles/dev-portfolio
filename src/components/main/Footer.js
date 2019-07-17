@@ -4,7 +4,7 @@ import Social from '../sections/components/Social';
 class Footer extends Component {
   render() {
     return (
-      <footer id='colophon' className='site-footer'>
+      <footer id='colophon' className='site-footer bg-light'>
         <div className='social-footer'>
           <Social />
         </div>
