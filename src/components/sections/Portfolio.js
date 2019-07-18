@@ -5,7 +5,7 @@ function Portfolio(props) {
   const portfolio = <h2>Projects</h2>;
   return (
     <div id='portfolio' className='text-center mt-12'>
-      {portfolio}
+      {/* {portfolio} */}
       <Project />
     </div>
   );

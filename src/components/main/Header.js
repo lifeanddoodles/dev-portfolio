@@ -7,8 +7,14 @@ class Header extends Component {
     return (
       <header className='site-nav navbar navbar-expand bg-light navbar-light'>
         <div className='container-fluid'>
-          <Branding />
-          <Navigation />
+          <div className='row'>
+            <div className='col-md-6'>
+              <Branding />
+            </div>
+            <div className='col-md-6'>
+              <Navigation />
+            </div>
+          </div>
         </div>
       </header>
     );

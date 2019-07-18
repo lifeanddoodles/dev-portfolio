@@ -1,13 +1,24 @@
+// $theme-colors: (
+// primary: #7AA7E4,
+// secondary: #4fbddc,
+// success: #0a7c3a,
+// info: #2150a9,
+// warning: #fc9a5b,
+// danger: #98210c,
+// light: #f3f3f3,
+// dark: #1A1A1A,
+// accent:#fa904c
+// ) !default;
 $theme-colors: (
-primary: #4f8bdc,
+primary: #7AA7E4,
 secondary: #4fbddc,
 success: #0a7c3a,
 info: #2150a9,
 warning: #fc9a5b,
 danger: #98210c,
 light: #f3f3f3,
-dark: #292929
-) !default;
-$accent: #fa904c;
-// $text-color: theme-color('dark');
-$text-color: #292929;
+dark: #1A1A1A,
+accent:#fa904c
+);
+
+$text-color: theme-color('dark');

@@ -1,100 +1,120 @@
+// Configuration
 @import '_variables';
+@import '_mixins';
 
-// check contrast text color and bg color
-@function check-contrast($foreground, $background) {
-  $r: (max(red($foreground), red($background))) - (min(red($foreground), red($background)));
-  $g: (max(green($foreground), green($background))) - (min(green($foreground), green($background)));
-  $b: (max(blue($foreground), blue($background))) - (min(blue($foreground), blue($background)));
-  $sum-rgb: $r + $g + $b;
+// Layout & components
+// @import "_forms";
+// @import "_buttons";
+// @import "_transitions";
+// @import "_dropdown";
+// @import "_button-group";
+// @import "_nav";
+// @import "_navbar";
+// @import "_card";
 
-  @if $sum-rgb < 500 {
-    // if false
-    @return "false";
-  } @else {
-    // true
-    // color:text-color;
-    @return "true";
+
+input {
+  width: 100%;
+  min-width: 100%;
+}
+footer, section {
+  padding-top:1.5rem;
+  padding-bottom:1.5rem;
+}
+.btn-group{
+  margin-bottom: 1rem;
+}
+.fullwidth {
+  .container {
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
   }
 }
+.expertise-area {
+  background: #fcfcfc none repeat scroll 0 0;
 
-
-@mixin adjust-color($background) {
-  $color-brightness: round((red($background) * 299) + (green($background) * 587) + (blue($background) * 114) / 1000);
-  $light-color: round((red(#ffffff) * 299) + (green(#ffffff) * 587) + (blue(#ffffff) * 114) / 1000);
-
-  @if abs($color-brightness) < ($light-color/2){
-    // if bg not light
-    // choose light text color
-    // check contrast light text color and bg color
-    $text-color: #f3f3f3;
-      // color: $text-color;
-    // @include lighten-color($text-color,$background);
-    color:lighten-color($text-color,$background);
-    // @while (check-contrast($text-color, $background) == "false") {
-    //   // color: $text-color;
-    //   $text-color: lighten($text-color, 1%);
-    //   @if (check-contrast($text-color, $background) == "true") {
-    //     color: $text-color;
-    //   }
-    // }
-  }
-
-  @else {
-    // else (if bg light)
-    // choose dark text color
-    // check contrast dark text color and bg color
-    // @include darken-color($text-color,$background);
-    color:darken-color($text-color,$background);
-    // @while (check-contrast($text-color, $background) == "false") {
-    //   // color: $text-color;
-    //   $text-color: darken($text-color, 1%);
-    //   @if (check-contrast($text-color, $background) == "true") {
-    //     color: $text-color;
-    //   }
-    // }
+  &:nth-child(odd) {
+    background: #fafafa none repeat scroll 0 0;
   }
 }
+#portfolio {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.card {
+  margin: 0 auto 2em;
+}
+.icon-list {
+  list-style: none;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+.icon {
+  font-size: 400%;
+}
+.icon-img svg  {
+  fill: #212529;
+}
+@media screen and (min-width: 34em){
+  .icon-list {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: baseline;
+    flex-wrap: wrap;
+    justify-content: center;
 
+    li {
+      width: 32%;
+      display: block;
+      margin-left: 1%;
+      margin-right: 1%;
 
-@function lighten-color($text-color,$background){
-  @while (check-contrast($text-color, $background) == "false") {
-    // color: $text-color;
-    $text-color: lighten($text-color, 1%);
+      &:nth-of-type(3n + 1) {
+        margin-left: 0;
+      }
+      &:nth-of-type(3n) {
+        margin-right: 0;
+      }
+    }
   }
-  // @if (check-contrast($text-color, $background) == "true") {
-  //   @return $text-color;
-  // }
-  @return $text-color;
 }
-
-@function darken-color($text-color,$background){
-  @while (check-contrast($text-color, $background) == "false") {
-    // color: $text-color;
-    $text-color: darken($text-color, 1%);
-
+@media screen and (min-width:720px){
+  #portfolio {
+    padding: 0 1em;
+    flex-direction: row;
+    .project {
+      margin-left: 1%;
+      margin-right: 1%;
+    }
   }
-  // @if (check-contrast($text-color, $background) == "true") {
-  //   @return $text-color;
-  // }
-  @return $text-color;
 }
-
-.bg-accent {
-  background-color: $accent;
+@media screen and (min-width: 720px) and (max-width: 1279px) {
+  #portfolio {
+    .project {
+      width: 49%;
+      &:nth-of-type(odd) {
+        margin-left: 0;
+      }
+      &:nth-of-type(even) {
+        margin-right: 0;
+      }
+    }
+  }
 }
-
-// $text-color: #292929;
-.btn.btn-primary {
-  background-color: #4f8bdc;
-  // @include adjust-color(#666666);
-  // color:lighten-color($text-color,#4f8bdc);
-}
-.btn.btn-accent {
-  background-color: $accent;
-  // @include adjust-color($accent);
-}
-.btn-accent {
-  &:hover {
-    background-color: #f9711a;
+@media screen and (min-width: 1280px) {
+  #portfolio {
+    .project {
+      width: 32%;
+      &:nth-of-type(3n + 1) {
+        margin-left: 0;
+      }
+      &:nth-of-type(3n) {
+        margin-right: 0;
+      }
+    }
   }
 }
