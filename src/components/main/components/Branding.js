@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import { NavbarBrand } from 'reactstrap';
 
 class Branding extends Component {
   render() {
     return (
-      <Link to='/' className='navbar-brand'>
-        Sandra Vargas | Front-end Developer
-      </Link>
+      <NavbarBrand tag={Link} to='/'>
+        Sandra Vargas
+      </NavbarBrand>
     );
   }
 }

@@ -2,7 +2,7 @@ import React from 'react';
 import Skill from './Skill';
 
 function Skills(props) {
-  const skills = <h2>Skill</h2>;
+  const skills = <li>Skill</li>;
   return (
     <ul className='text-center icon-list'>
       {skills}

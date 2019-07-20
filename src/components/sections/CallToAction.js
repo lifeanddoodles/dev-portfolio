@@ -4,7 +4,7 @@ function CallToAction(props) {
   return (
     <section id='contact' className='bg-accent fullwidth'>
       <div className='container'>
-        <h1 id='contact'>Reach out</h1>
+        <h1>Reach out</h1>
         <form action=''>
           <div className='form-row'>
             <div className='form-group col-md-6'>

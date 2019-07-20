@@ -12,8 +12,8 @@ code {
     monospace;
 }
 main{
-  min-height:calc(100vh - 168px);
+  min-height:calc(100vh - 152px);
 }
 .site-footer{
-  height:112px;
+  height:152px;
 }

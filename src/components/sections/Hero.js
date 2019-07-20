@@ -5,7 +5,7 @@ import Social from './components/Social';
 class Hero extends Component {
   render() {
     return (
-      <section id='hero' className='text-center jumbotron jumbotron-fluid'>
+      <section id='top' className='text-center jumbotron jumbotron-fluid'>
         <div className='container'>
           <About />
         </div>
