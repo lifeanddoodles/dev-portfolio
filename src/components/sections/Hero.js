@@ -1,15 +1,16 @@
 import React, { Component } from 'react';
+import { Jumbotron, Container } from 'reactstrap';
 import About from './components/About';
 import Social from './components/Social';
 
 class Hero extends Component {
   render() {
     return (
-      <section id='top' className='text-center jumbotron jumbotron-fluid'>
-        <div className='container'>
+      <Jumbotron id='top' className='text-center' fluid>
+        <Container fluid>
           <About />
-        </div>
-        <div className='container'>
+        </Container>
+        <Container fluid>
           <div className='row'>
             <div className='col-md-6'>
               <h3>Have a project?</h3>
@@ -22,8 +23,8 @@ class Hero extends Component {
               <Social />
             </div>
           </div>
-        </div>
-      </section>
+        </Container>
+      </Jumbotron>
     );
   }
 }

@@ -5,7 +5,7 @@ import { NavbarBrand } from 'reactstrap';
 class Branding extends Component {
   render() {
     return (
-      <NavbarBrand tag={Link} to='/'>
+      <NavbarBrand tag={Link} to='/' className='text-primary'>
         Sandra Vargas
       </NavbarBrand>
     );
