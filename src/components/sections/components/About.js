@@ -15,8 +15,7 @@ function About(props) {
       </h2>
       <p className='lead'>
         Team player with good communication skills. Currently learning about
-        accesibility and the MERN stack (I like to dabble in back-end work as
-        well).
+        accesibility and the MERN stack.
       </p>
     </div>
   );
