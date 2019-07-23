@@ -1,13 +1,17 @@
 import React, { Component } from 'react';
-import Social from '../sections/components/Social';
+import FooterCallToAction from './components/FooterCallToAction';
 
 class Footer extends Component {
   render() {
     return (
       <footer id='colophon' className='site-footer bg-light text-center'>
         <div className='container'>
-          <div className='social-footer'>
-            <Social />
+          <div
+            className='social-footer text-center mb-1'
+            role='group'
+            aria-label='Social media profiles'
+          >
+            <FooterCallToAction />
           </div>
           <div className='site-info'>
             <p>

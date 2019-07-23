@@ -1,46 +1,48 @@
 import React from 'react';
+import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 
 function CallToAction(props) {
   return (
     <section id='contact' className='bg-accent fullwidth'>
       <div className='container'>
         <h1>Reach out</h1>
-        <form action=''>
+        <Form action=''>
           <div className='form-row'>
-            <div className='form-group col-md-6'>
-              <label htmlFor='name'>Name</label>
-              <input
+            <FormGroup className=' col-md-6'>
+              <Label htmlFor='name'>Name</Label>
+              <Input
                 type='text'
                 className='form-control'
                 name='name'
                 id='name'
                 value=''
               />
-            </div>
-            <div className='form-group col-md-6'>
-              <label htmlFor='email'>Email</label>
-              <input
+            </FormGroup>
+            <FormGroup className=' col-md-6'>
+              <Label htmlFor='email'>Email</Label>
+              <Input
                 type='text'
                 className='form-control'
                 name='email'
                 id='email'
                 value=''
               />
-            </div>
+            </FormGroup>
           </div>
-          <div className='form-group'>
-            <label htmlFor='message'>Message</label>
-            <textarea
+          <FormGroup className=''>
+            <Label htmlFor='message'>Message</Label>
+            <Input
+              type='textarea'
               name='message'
               className='form-control'
               id='message'
               value=''
             />
-          </div>
-          <button className='btn btn-accent btn-lg' type='submit'>
+          </FormGroup>
+          <Button color='primary' className='btn btn-lg' type='submit'>
             Send
-          </button>
-        </form>
+          </Button>
+        </Form>
       </div>
     </section>
   );

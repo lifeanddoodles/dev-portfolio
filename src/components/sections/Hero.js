@@ -7,10 +7,8 @@ class Hero extends Component {
   render() {
     return (
       <Jumbotron id='top' className='text-center' fluid>
-        <Container fluid>
+        <Container>
           <About />
-        </Container>
-        <Container fluid>
           <div className='row'>
             <div className='col-md-6'>
               <h3>Have a project?</h3>
