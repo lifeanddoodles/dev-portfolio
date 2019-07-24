@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 
-function CallToAction(props) {
+function Contact(props) {
   return (
     <section id='contact' className='bg-accent fullwidth'>
       <div className='container'>
@@ -48,4 +48,4 @@ function CallToAction(props) {
   );
 }
 
-export default CallToAction;
+export default Contact;

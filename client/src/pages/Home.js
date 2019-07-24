@@ -3,13 +3,13 @@ import axios from 'axios';
 import Hero from '../components/sections/Hero';
 import Portfolio from '../components/sections/Portfolio';
 import ExpertiseAreas from '../components/sections/ExpertiseAreas';
-import CallToAction from '../components/sections/CallToAction';
+import Contact from '../components/sections/Contact';
 
 class Home extends Component {
   state = {
     projects: [],
     expertise: {},
-    cta: {}
+    calltoactions: {}
   };
 
   componentWillMount() {
@@ -21,10 +21,11 @@ class Home extends Component {
       ])
       .then(
         axios.spread((projectsRes, expertiseRes, calltoactionsRes) => {
-          this.setState({ projects: projectsRes.data });
-          this.setState({ expertise: expertiseRes.data });
-          this.setState({ calltoactions: calltoactionsRes.data });
-          // console.log(this.state.expertise);
+          this.setState({
+            projects: projectsRes.data,
+            expertise: expertiseRes.data,
+            calltoactions: calltoactionsRes.data
+          });
         })
       )
       .catch(function(error) {
@@ -35,10 +36,10 @@ class Home extends Component {
   render() {
     return (
       <Fragment>
-        <Hero calltoactions={this.state.calltoactions} />
+        <Hero callToActions={this.state.calltoactions} />
         <Portfolio projects={this.state.projects} />
         <ExpertiseAreas expertise={this.state.expertise} />
-        <CallToAction />
+        <Contact />
       </Fragment>
     );
   }
