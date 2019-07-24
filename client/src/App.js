@@ -5,6 +5,16 @@ import ErrorPage from './pages/ErrorPage';
 import Header from './components/main/Header';
 import Footer from './components/main/Footer';
 import './styles/index.scss';
+import { dom, library } from '@fortawesome/fontawesome-svg-core';
+import {
+  faDownload,
+  faEnvelope,
+  faEye
+} from '@fortawesome/free-solid-svg-icons';
+import { fab } from '@fortawesome/free-brands-svg-icons';
+
+library.add(fab, faDownload, faEnvelope, faEye);
+dom.watch();
 
 function App() {
   return (

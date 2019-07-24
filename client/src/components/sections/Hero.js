@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Jumbotron, Container } from 'reactstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import About from './components/About';
 import Social from './components/Social';
 
@@ -13,6 +14,7 @@ class Hero extends Component {
             <div className='col-md-6'>
               <h3>Have a project?</h3>
               <a className='btn btn-accent btn-lg btn-block' href='#contact'>
+                <FontAwesomeIcon icon='envelope' />
                 Contact me
               </a>
             </div>

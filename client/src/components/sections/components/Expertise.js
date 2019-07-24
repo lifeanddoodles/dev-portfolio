@@ -7,11 +7,11 @@ function Expertise(props) {
       <div className='container'>
         <div className='row'>
           <div className='col-md'>
-            <h3>name</h3>
-            <p>description</p>
+            <h3>{props.name}</h3>
+            <p>{props.description}</p>
           </div>
           <div className='col-md'>
-            <Skills />
+            <Skills skills={props.skills} />
           </div>
         </div>
       </div>

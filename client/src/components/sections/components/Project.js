@@ -1,6 +1,9 @@
 import React, { Fragment } from 'react';
+import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function Project(props) {
+  const codeUnavailable = props.url.codeUrl === '';
   return (
     <Fragment>
       <div
@@ -16,231 +19,35 @@ function Project(props) {
         />
         <div className='card-body'>
           <h3 className='card-title' itemProp='name'>
-            name
+            {props.name}
           </h3>
           <p className='card-text' itemProp='description'>
-            description
+            {props.description.short}
           </p>
           <p className='card-text' itemProp='sourceOrganization'>
-            client
+            {props.client}
           </p>
         </div>
 
         <div className='btn-group card-body' role='navigation'>
-          <a
-            href='projectUrl.com'
+          <Link
+            to={props.url.projectUrl}
             className='btn btn-primary card-link'
             itemProp='url'
           >
+            <FontAwesomeIcon icon='eye' />
             View Project
-          </a>
-          <a
-            href='codeUrl.com'
-            className='btn btn-primary card-link'
+          </Link>
+          <Link
+            to={props.url.codeUrl}
+            className={
+              'btn btn-primary card-link' + (codeUnavailable ? ' disabled' : '')
+            }
             itemProp='url'
           >
+            <FontAwesomeIcon icon={['fab', 'github']} />
             View Code
-          </a>
-        </div>
-      </div>
-      <div
-        className='card project'
-        itemScope
-        itemType='https://schema.org/CreativeWork'
-      >
-        <img
-          className='card-img'
-          src='https://via.placeholder.com/480x240'
-          alt=''
-          itemProp='image'
-        />
-        <div className='card-body'>
-          <h3 className='card-title' itemProp='name'>
-            name
-          </h3>
-          <p className='card-text' itemProp='description'>
-            description
-          </p>
-          <p className='card-text' itemProp='sourceOrganization'>
-            client
-          </p>
-        </div>
-
-        <div className='btn-group card-body' role='navigation'>
-          <a
-            href='projectUrl.com'
-            className='btn btn-primary card-link'
-            itemProp='url'
-          >
-            View Project
-          </a>
-          <a
-            href='codeUrl.com'
-            className='btn btn-primary card-link'
-            itemProp='url'
-          >
-            View Code
-          </a>
-        </div>
-      </div>
-      <div
-        className='card project'
-        itemScope
-        itemType='https://schema.org/CreativeWork'
-      >
-        <img
-          className='card-img'
-          src='https://via.placeholder.com/480x240'
-          alt=''
-          itemProp='image'
-        />
-        <div className='card-body'>
-          <h3 className='card-title' itemProp='name'>
-            name
-          </h3>
-          <p className='card-text' itemProp='description'>
-            description
-          </p>
-          <p className='card-text' itemProp='sourceOrganization'>
-            client
-          </p>
-        </div>
-
-        <div className='btn-group card-body' role='navigation'>
-          <a
-            href='projectUrl.com'
-            className='btn btn-primary card-link'
-            itemProp='url'
-          >
-            View Project
-          </a>
-          <a
-            href='codeUrl.com'
-            className='btn btn-primary card-link'
-            itemProp='url'
-          >
-            View Code
-          </a>
-        </div>
-      </div>
-      <div
-        className='card project'
-        itemScope
-        itemType='https://schema.org/CreativeWork'
-      >
-        <img
-          className='card-img'
-          src='https://via.placeholder.com/480x240'
-          alt=''
-          itemProp='image'
-        />
-        <div className='card-body'>
-          <h3 className='card-title' itemProp='name'>
-            name
-          </h3>
-          <p className='card-text' itemProp='description'>
-            description
-          </p>
-          <p className='card-text' itemProp='sourceOrganization'>
-            client
-          </p>
-        </div>
-
-        <div className='btn-group card-body' role='navigation'>
-          <a
-            href='projectUrl.com'
-            className='btn btn-primary card-link'
-            itemProp='url'
-          >
-            View Project
-          </a>
-          <a
-            href='codeUrl.com'
-            className='btn btn-primary card-link'
-            itemProp='url'
-          >
-            View Code
-          </a>
-        </div>
-      </div>
-      <div
-        className='card project'
-        itemScope
-        itemType='https://schema.org/CreativeWork'
-      >
-        <img
-          className='card-img'
-          src='https://via.placeholder.com/480x240'
-          alt=''
-          itemProp='image'
-        />
-        <div className='card-body'>
-          <h3 className='card-title' itemProp='name'>
-            name
-          </h3>
-          <p className='card-text' itemProp='description'>
-            description
-          </p>
-          <p className='card-text' itemProp='sourceOrganization'>
-            client
-          </p>
-        </div>
-
-        <div className='btn-group card-body' role='navigation'>
-          <a
-            href='projectUrl.com'
-            className='btn btn-primary card-link'
-            itemProp='url'
-          >
-            View Project
-          </a>
-          <a
-            href='codeUrl.com'
-            className='btn btn-primary card-link'
-            itemProp='url'
-          >
-            View Code
-          </a>
-        </div>
-      </div>
-      <div
-        className='card project'
-        itemScope
-        itemType='https://schema.org/CreativeWork'
-      >
-        <img
-          className='card-img'
-          src='https://via.placeholder.com/480x240'
-          alt=''
-          itemProp='image'
-        />
-        <div className='card-body'>
-          <h3 className='card-title' itemProp='name'>
-            name
-          </h3>
-          <p className='card-text' itemProp='description'>
-            description
-          </p>
-          <p className='card-text' itemProp='sourceOrganization'>
-            client
-          </p>
-        </div>
-
-        <div className='btn-group card-body' role='navigation'>
-          <a
-            href='projectUrl.com'
-            className='btn btn-primary card-link'
-            itemProp='url'
-          >
-            View Project
-          </a>
-          <a
-            href='codeUrl.com'
-            className='btn btn-primary card-link'
-            itemProp='url'
-          >
-            View Code
-          </a>
+          </Link>
         </div>
       </div>
     </Fragment>
