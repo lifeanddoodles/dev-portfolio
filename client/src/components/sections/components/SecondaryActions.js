@@ -4,7 +4,7 @@ import CallToAction from './CallToAction';
 
 function SecondaryActions(props) {
   const secondaryActionsData = props.secondaryActions;
-  const secActions = secondaryActionsData.map((item, index) => (
+  const secondaryActions = secondaryActionsData.map((item, index) => (
     <Link
       className='btn btn-primary'
       to={item.url}
@@ -22,11 +22,11 @@ function SecondaryActions(props) {
   return (
     <div className='text-center'>
       <div
-        className='btn-group btn-group-lg'
+        className='btn-group btn-group-lg other-ctas'
         role='group'
         aria-label='Large button group'
       >
-        {secActions}
+        {secondaryActions}
       </div>
     </div>
   );

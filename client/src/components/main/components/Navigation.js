@@ -44,7 +44,6 @@ class Navigation extends Component {
               <NavLink
                 tag={HashLink}
                 smooth='true'
-                className='text-primary'
                 to='#top'
                 onClick={this.closeNavbar}
               >
@@ -55,7 +54,6 @@ class Navigation extends Component {
               <NavLink
                 tag={HashLink}
                 smooth='true'
-                className='text-primary'
                 to='#portfolio'
                 onClick={this.closeNavbar}
               >
@@ -66,7 +64,6 @@ class Navigation extends Component {
               <NavLink
                 tag={HashLink}
                 smooth='true'
-                className='text-primary'
                 to='#skills'
                 onClick={this.closeNavbar}
               >
@@ -77,7 +74,6 @@ class Navigation extends Component {
               <NavLink
                 tag={HashLink}
                 smooth='true'
-                className='text-primary'
                 to='#contact'
                 onClick={this.closeNavbar}
               >
