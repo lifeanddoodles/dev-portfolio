@@ -3,8 +3,8 @@ module.exports = {
     iconType: `fas`,
     icon: `envelope`,
     ariaLabel: `Contact Me`,
-    name: `Contact`,
-    url: `#contact`
+    name: `Contact me`,
+    url: `https://dev.lifeanddoodles.com/#contact`
   },
   secondary: [
     {

@@ -10,11 +10,10 @@ function PrimaryAction(props) {
       <Link
         className='btn btn-accent btn-lg main-action'
         to={primaryAction.url}
-        target='_blank'
+        target='_self'
         aria-label={primaryAction.ariaLabel}
       >
         <CallToAction
-          key={primaryAction.name}
           name={primaryAction.name}
           icon={primaryAction.icon}
           iconType={primaryAction.iconType}

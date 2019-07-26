@@ -6,13 +6,13 @@ function SecondaryActions(props) {
   const secondaryActionsData = props.secondaryActions;
   const secondaryActions = secondaryActionsData.map((item, index) => (
     <Link
+      key={index}
       className='btn btn-primary'
       to={item.url}
       target='_blank'
       aria-label={item.ariaLabel}
     >
       <CallToAction
-        key={index}
         name={item.name}
         icon={item.icon}
         iconType={item.iconType}

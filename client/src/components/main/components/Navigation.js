@@ -32,7 +32,7 @@ class Navigation extends Component {
   }
   render() {
     return (
-      <Navbar light expand='lg' aria-label='Main navigation'>
+      <Navbar expand='lg' aria-label='Main navigation'>
         <Branding />
         <NavbarToggler
           onClick={this.toggleNavbar}

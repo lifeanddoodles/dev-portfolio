@@ -8,36 +8,17 @@ function FooterCallToAction(props) {
         className='icon-link'
         to='https://github.com/lifeanddoodles'
         target='_blank'
+        aria-label='Visit GitHub profile'
       >
-        <img
-          className='icon-img'
-          src='https://via.placeholder.com/32'
-          alt=''
-          role='presentation'
-        />
-        &nbsp; Github
+        <i className={`fab fa-github icon`} title='Github' />
       </Link>
       <Link
         className='icon-link'
         to='https://www.linkedin.com/in/sandralvargas/'
         target='_blank'
+        aria-label='Visit LinkedIn profile'
       >
-        <img
-          className='icon-img'
-          src='https://via.placeholder.com/32'
-          alt=''
-          role='presentation'
-        />
-        &nbsp; LinkedIn
-      </Link>
-      <Link className='icon-link' to='#' target='_blank'>
-        <img
-          className='icon-img'
-          src='https://via.placeholder.com/32'
-          alt=''
-          role='presentation'
-        />
-        &nbsp; Resume
+        <i className={`fab fa-linkedin icon`} title='LinkedIn' />
       </Link>
     </Fragment>
   );
