@@ -9,6 +9,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 require('./routes/projects')(app);
 require('./routes/skills')(app);
 require('./routes/calltoactions')(app);
+require('./routes/send')(app);
 
 if (process.env.NODE_ENV === 'production') {
   //Express will serve up production assets
