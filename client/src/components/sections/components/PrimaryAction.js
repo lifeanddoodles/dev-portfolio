@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 import CallToAction from './CallToAction';
 
 function PrimaryAction(props) {
@@ -7,9 +7,9 @@ function PrimaryAction(props) {
 
   return (
     <div className='text-center'>
-      <Link
+      <HashLink
         className='btn btn-accent btn-lg main-action'
-        to={primaryAction.url}
+        to={`${primaryAction.url}`}
         target='_self'
         aria-label={primaryAction.ariaLabel}
       >
@@ -18,7 +18,7 @@ function PrimaryAction(props) {
           icon={primaryAction.icon}
           iconType={primaryAction.iconType}
         />
-      </Link>
+      </HashLink>
     </div>
   );
 }

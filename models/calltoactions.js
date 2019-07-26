@@ -4,7 +4,7 @@ module.exports = {
     icon: `envelope`,
     ariaLabel: `Contact Me`,
     name: `Contact me`,
-    url: `https://dev.lifeanddoodles.com/#contact`
+    url: `#contact`
   },
   secondary: [
     {
