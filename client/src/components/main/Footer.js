@@ -7,7 +7,7 @@ class Footer extends Component {
       <footer id='colophon' className='site-footer bg-light text-center'>
         <div className='container'>
           <div
-            className='social-footer text-center mb-1'
+            className='social-footer text-center'
             role='group'
             aria-label='Social media profiles'
           >

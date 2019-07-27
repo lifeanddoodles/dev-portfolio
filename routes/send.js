@@ -53,7 +53,8 @@ module.exports = app => {
       }
       console.log('Message sent: %s', info.messageId);
       console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
-      res.sendStatus(200);
+      // res.sendStatus(200);
+      res.redirect('/thank-you');
 
       // res.render('contact', { msg: 'Email has been sent' });
     });
