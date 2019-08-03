@@ -48,7 +48,7 @@ module.exports = {
   design: {
     id: `002`,
     name: `Graphic Design`,
-    description: `Creating great content is only half the story. Crafting the right message for your audience, optimizing your content for SEO, careful interpretation of your results, and acting on those results requires a completely different set of tools. Here’s what I’ve versed in.`,
+    description: `I am able to create graphic assets and a consistent brand throughout all media, either print or digital.`,
     skills: [
       {
         icon: `images/logos/photoshop.svg`,

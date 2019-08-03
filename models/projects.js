@@ -94,10 +94,10 @@ module.exports = [
   },
   {
     id: `003`,
-    creativeItemType: `CreativeWork`,
+    creativeItemType: `WebSite`,
     name: `Twirly Whiskers`,
     description: {
-      short: `I was tasked with redesigning the front-facing website. Objectives were: improved maintainability, mobile responsiveness, and modernizing the look of the site while retaining it’s original theme and feel.`,
+      short: `This is a personal project, where I'm testing Schema markup for SEO purposes.`,
       long: [
         `I was tasked with redesigning the front-facing website. Objectives were: improved maintainability, mobile responsiveness, and modernizing the look of the site while retaining it’s original theme and feel.`,
         `Because the previous site had been built by an inexperienced developer it was missing many best practices. Therefore, the front end was entirely rebuilt from scratch. New additions included BEM and functional programming.`,
@@ -116,8 +116,8 @@ module.exports = [
       large: `https://via.placeholder.com/600x240`
     },
     url: {
-      codeUrl: `https://github.com`,
-      projectUrl: `https://demo.com`
+      codeUrl: ``,
+      projectUrl: `https://twirlywhiskers.com/`
     },
     client: `Personal Project`,
     services: [
@@ -130,17 +130,20 @@ module.exports = [
       `WordPress`,
       `HTML5`,
       `CSS3`,
+      `Schema Markup`,
       `JavaScript`,
+      `jQuery`,
       `Custom Taxonomy`,
-      `Custom Post Type`
+      `Custom Post Type`,
+      `Custom Template`
     ]
   },
   {
     id: `004`,
-    creativeItemType: `CreativeWork`,
-    name: `Local Business Theme`,
+    creativeItemType: `WebSite`,
+    name: `C&C Drywall`,
     description: {
-      short: `I was tasked with redesigning the front-facing website. Objectives were: improved maintainability, mobile responsiveness, and modernizing the look of the site while retaining it’s original theme and feel.`,
+      short: `My job consisted of converting the mockups provided to a fully functioning website.`,
       long: [
         `I was tasked with redesigning the front-facing website. Objectives were: improved maintainability, mobile responsiveness, and modernizing the look of the site while retaining it’s original theme and feel.`,
         `Because the previous site had been built by an inexperienced developer it was missing many best practices. Therefore, the front end was entirely rebuilt from scratch. New additions included BEM and functional programming.`,
@@ -159,31 +162,28 @@ module.exports = [
       large: `https://via.placeholder.com/600x240`
     },
     url: {
-      codeUrl: `https://github.com`,
-      projectUrl: `https://demo.com`
+      codeUrl: ``,
+      projectUrl: `https://ccdrywall.com/`
     },
-    client: `Personal Project`,
-    services: [
-      `Web Design`,
-      `Web Development`,
-      `Theme Development`,
-      `Plugin Development`
-    ],
+    client: `C&C Drywall`,
+    services: [`Web Development`, `Theme Development`, `Plugin Development`],
     keywords: [
       `WordPress`,
       `HTML5`,
       `CSS3`,
       `JavaScript`,
+      `jQuery`,
       `Custom Taxonomy`,
-      `Custom Post Type`
+      `Custom Post Type`,
+      `Custom Template`
     ]
   },
   {
     id: `005`,
-    creativeItemType: `CreativeWork`,
-    name: `eCommerce Theme`,
+    creativeItemType: `WebSite`,
+    name: `Alex DVM`,
     description: {
-      short: `I was tasked with redesigning the front-facing website. Objectives were: improved maintainability, mobile responsiveness, and modernizing the look of the site while retaining it’s original theme and feel.`,
+      short: `I was tasked with redesigning the website to match the main company's theme.`,
       long: [
         `I was tasked with redesigning the front-facing website. Objectives were: improved maintainability, mobile responsiveness, and modernizing the look of the site while retaining it’s original theme and feel.`,
         `Because the previous site had been built by an inexperienced developer it was missing many best practices. Therefore, the front end was entirely rebuilt from scratch. New additions included BEM and functional programming.`,
@@ -202,23 +202,20 @@ module.exports = [
       large: `https://via.placeholder.com/600x240`
     },
     url: {
-      codeUrl: `https://github.com`,
-      projectUrl: `https://demo.com`
+      codeUrl: ``,
+      projectUrl: `https://www.alexdvm.com`
     },
-    client: `Personal Project`,
-    services: [
-      `Web Design`,
-      `Web Development`,
-      `Theme Development`,
-      `Plugin Development`
-    ],
+    client: `Alex DVM`,
+    services: [`Web Development`, `Theme Development`, `Plugin Development`],
     keywords: [
       `WordPress`,
       `HTML5`,
       `CSS3`,
       `JavaScript`,
+      `jQuery`,
       `Custom Taxonomy`,
-      `Custom Post Type`
+      `Custom Post Type`,
+      `Custom Template`
     ]
   }
 ];
