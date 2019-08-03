@@ -20,14 +20,12 @@ function SecondaryActions(props) {
     </Link>
   ));
   return (
-    <div className='text-center'>
-      <div
-        className='btn-group btn-group-lg other-ctas'
-        role='group'
-        aria-label='Large button group'
-      >
-        {secondaryActions}
-      </div>
+    <div
+      className='btn-group btn-group-lg other-ctas'
+      role='group'
+      aria-label='Large button group'
+    >
+      {secondaryActions}
     </div>
   );
 }

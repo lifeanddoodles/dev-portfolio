@@ -6,20 +6,18 @@ function PrimaryAction(props) {
   const primaryAction = props.primaryAction;
 
   return (
-    <div className='text-center'>
-      <HashLink
-        className='btn btn-accent btn-lg main-action'
-        to={`${primaryAction.url}`}
-        target='_self'
-        aria-label={primaryAction.ariaLabel}
-      >
-        <CallToAction
-          name={primaryAction.name}
-          icon={primaryAction.icon}
-          iconType={primaryAction.iconType}
-        />
-      </HashLink>
-    </div>
+    <HashLink
+      className='btn btn-accent btn-lg main-action'
+      to={`${primaryAction.url}`}
+      target='_self'
+      aria-label={primaryAction.ariaLabel}
+    >
+      <CallToAction
+        name={primaryAction.name}
+        icon={primaryAction.icon}
+        iconType={primaryAction.iconType}
+      />
+    </HashLink>
   );
 }
 PrimaryAction.defaultProps = {

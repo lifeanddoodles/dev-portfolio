@@ -2,4 +2,3 @@ $text-color: theme-color('dark');
 $icon-height: 4rem;
 $nav-height: calc( #{$nav-link-height} + #{$navbar-padding-y} * 2 );
 $footer-height: calc(#{$navbar-padding-y} * 2 + #{$icon-height} + #{$font-size-base} * #{$line-height-base + #{$paragraph-margin-bottom} * 2});
-// $footer-height: calc( #{$icon-height} + #{$navbar-padding-y}*2 );
