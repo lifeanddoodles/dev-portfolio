@@ -81,19 +81,99 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./server/index.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./src/server/index.js");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./server/index.js":
-/*!*************************!*\
-  !*** ./server/index.js ***!
-  \*************************/
+/***/ "./src/App.js":
+/*!********************!*\
+  !*** ./src/App.js ***!
+  \********************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"react\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _Home__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Home */ \"./src/Home.js\");\nvar _jsxFileName = \"/Users/sandra/Documents/Work/_web-dev/dev-portfolio/src/App.js\";\n// import React from 'react';\n// import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';\n// import Home from './pages/Home';\n// import ThankYou from './pages/ThankYou';\n// import ErrorPage from './pages/ErrorPage';\n// import Header from './components/main/Header';\n// import Footer from './components/main/Footer';\n// import './styles/index.scss';\n// import { dom, library } from '@fortawesome/fontawesome-svg-core';\n// import {\n//   faDownload,\n//   faEnvelope,\n//   faEye\n// } from '@fortawesome/free-solid-svg-icons';\n// import { fab } from '@fortawesome/free-brands-svg-icons';\n// library.add(fab, faDownload, faEnvelope, faEye);\n// dom.watch();\n// function App() {\n//   return (\n//     <Router>\n//       <Header />\n//       <main role='main' className='site-main'>\n//         <Route\n//           render={({ location }) => (\n//             <Switch location={location}>\n//               <Route exact path='/' component={Home} />\n//               <Route path='/thank-you' component={ThankYou} />\n//               <Route component={ErrorPage} />\n//             </Switch>\n//           )}\n//         />\n//       </main>\n//       <Footer />\n//     </Router>\n//   );\n// }\n// export default App;\n\n\n\nconst App = () => {\n  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Home__WEBPACK_IMPORTED_MODULE_1__[\"default\"], {\n    name: \"Alligator\",\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 45\n    },\n    __self: undefined\n  });\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (App);\n\n//# sourceURL=webpack:///./src/App.js?");
+
+/***/ }),
+
+/***/ "./src/Home.js":
+/*!*********************!*\
+  !*** ./src/Home.js ***!
+  \*********************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"react\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\nvar _jsxFileName = \"/Users/sandra/Documents/Work/_web-dev/dev-portfolio/src/Home.js\";\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (props => {\n  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"h1\", {\n    __source: {\n      fileName: _jsxFileName,\n      lineNumber: 4\n    },\n    __self: undefined\n  }, \"Later \", props.name, \"!\");\n});\n\n//# sourceURL=webpack:///./src/Home.js?");
+
+/***/ }),
+
+/***/ "./src/server/index.js":
+/*!*****************************!*\
+  !*** ./src/server/index.js ***!
+  \*****************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* WEBPACK VAR INJECTION */(function(__dirname) {/* harmony import */ var path__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! path */ \"path\");\n/* harmony import */ var path__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(path__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var fs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! fs */ \"fs\");\n/* harmony import */ var fs__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(fs__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ \"react\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var express__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! express */ \"express\");\n/* harmony import */ var express__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(express__WEBPACK_IMPORTED_MODULE_3__);\n/* harmony import */ var react_dom_server__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-dom/server */ \"react-dom/server\");\n/* harmony import */ var react_dom_server__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_dom_server__WEBPACK_IMPORTED_MODULE_4__);\n/* harmony import */ var _App__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../App */ \"./src/App.js\");\nvar _jsxFileName = \"/Users/sandra/Documents/Work/_web-dev/dev-portfolio/src/server/index.js\";\n\n\n\n\n\n\nconst PORT = process.env.PORT || 3006;\nconst app = express__WEBPACK_IMPORTED_MODULE_3___default()();\napp.use(express__WEBPACK_IMPORTED_MODULE_3___default.a.static(path__WEBPACK_IMPORTED_MODULE_0___default.a.resolve(__dirname, '..', '..', 'build'))); // app.use(express.static('./build'));\n\napp.get('/*', (req, res) => {\n  // console.log(req);\n  // const indexFile = path.resolve(__dirname, 'build', 'index.html');\n  // fs.readFile(indexFile, 'utf8', (err, data) => {\n  //   if (err) {\n  //     console.error('Something went wrong:', err);\n  //     return res.status(500).send('Oops, better luck next time!');\n  //   }\n  //   return res.send(\n  //     data.replace('<div id=\"root\"></div>', `<div id=\"root\">${app}</div>`)\n  //   );\n  // });\n  const filePath = path__WEBPACK_IMPORTED_MODULE_0___default.a.resolve(__dirname, '..', '..', 'build', 'index.html');\n  fs__WEBPACK_IMPORTED_MODULE_1___default.a.readFile(filePath, 'utf8', (err, htmlData) => {\n    if (err) {\n      console.error('read err', err);\n      return res.status(404).end();\n    }\n\n    const context = {};\n    const markup = react_dom_server__WEBPACK_IMPORTED_MODULE_4___default.a.renderToString(react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_App__WEBPACK_IMPORTED_MODULE_5__[\"default\"], {\n      __source: {\n        fileName: _jsxFileName,\n        lineNumber: 37\n      },\n      __self: undefined\n    }));\n\n    if (context.url) {\n      res.redirect(301, context.url);\n    } else {\n      const RenderedApp = htmlData.replace('<div id=\"root\"></div>', \"<div id=\\\"root\\\">\".concat(markup, \"</div>\"));\n      res.send(RenderedApp);\n    }\n  });\n});\napp.listen(PORT, () => {\n  console.log(\"\\uD83D\\uDE0E Server is listening on port \".concat(PORT));\n});\n/* WEBPACK VAR INJECTION */}.call(this, \"/\"))\n\n//# sourceURL=webpack:///./src/server/index.js?");
+
+/***/ }),
+
+/***/ "express":
+/*!**************************!*\
+  !*** external "express" ***!
+  \**************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("throw new Error(\"Module build failed (from ./node_modules/babel-loader/lib/index.js):\\nTypeError: Cannot read property 'bindings' of null\\n    at Scope.moveBindingTo (/Users/sandra/Documents/Work/_web-dev/dev-portfolio/node_modules/@babel/traverse/lib/scope/index.js:864:13)\\n    at BlockScoping.updateScopeInfo (/Users/sandra/Documents/Work/_web-dev/dev-portfolio/node_modules/babel-plugin-transform-es2015-block-scoping/lib/index.js:364:17)\\n    at BlockScoping.run (/Users/sandra/Documents/Work/_web-dev/dev-portfolio/node_modules/babel-plugin-transform-es2015-block-scoping/lib/index.js:330:12)\\n    at PluginPass.BlockStatementSwitchStatementProgram (/Users/sandra/Documents/Work/_web-dev/dev-portfolio/node_modules/babel-plugin-transform-es2015-block-scoping/lib/index.js:70:24)\\n    at newFn (/Users/sandra/Documents/Work/_web-dev/dev-portfolio/node_modules/@babel/traverse/lib/visitors.js:193:21)\\n    at NodePath._call (/Users/sandra/Documents/Work/_web-dev/dev-portfolio/node_modules/@babel/traverse/lib/path/context.js:53:20)\\n    at NodePath.call (/Users/sandra/Documents/Work/_web-dev/dev-portfolio/node_modules/@babel/traverse/lib/path/context.js:40:17)\\n    at NodePath.visit (/Users/sandra/Documents/Work/_web-dev/dev-portfolio/node_modules/@babel/traverse/lib/path/context.js:88:12)\\n    at TraversalContext.visitQueue (/Users/sandra/Documents/Work/_web-dev/dev-portfolio/node_modules/@babel/traverse/lib/context.js:118:16)\\n    at TraversalContext.visitSingle (/Users/sandra/Documents/Work/_web-dev/dev-portfolio/node_modules/@babel/traverse/lib/context.js:90:19)\\n    at TraversalContext.visit (/Users/sandra/Documents/Work/_web-dev/dev-portfolio/node_modules/@babel/traverse/lib/context.js:146:19)\\n    at Function.traverse.node (/Users/sandra/Documents/Work/_web-dev/dev-portfolio/node_modules/@babel/traverse/lib/index.js:94:17)\\n    at traverse (/Users/sandra/Documents/Work/_web-dev/dev-portfolio/node_modules/@babel/traverse/lib/index.js:76:12)\\n    at transformFile (/Users/sandra/Documents/Work/_web-dev/dev-portfolio/node_modules/@babel/core/lib/transformation/index.js:88:29)\\n    at runSync (/Users/sandra/Documents/Work/_web-dev/dev-portfolio/node_modules/@babel/core/lib/transformation/index.js:45:3)\\n    at runAsync (/Users/sandra/Documents/Work/_web-dev/dev-portfolio/node_modules/@babel/core/lib/transformation/index.js:35:14)\\n    at process.nextTick (/Users/sandra/Documents/Work/_web-dev/dev-portfolio/node_modules/@babel/core/lib/transform.js:34:34)\\n    at process.internalTickCallback (internal/process/next_tick.js:70:11)\");\n\n//# sourceURL=webpack:///./server/index.js?");
+eval("module.exports = require(\"express\");\n\n//# sourceURL=webpack:///external_%22express%22?");
+
+/***/ }),
+
+/***/ "fs":
+/*!*********************!*\
+  !*** external "fs" ***!
+  \*********************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = require(\"fs\");\n\n//# sourceURL=webpack:///external_%22fs%22?");
+
+/***/ }),
+
+/***/ "path":
+/*!***********************!*\
+  !*** external "path" ***!
+  \***********************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = require(\"path\");\n\n//# sourceURL=webpack:///external_%22path%22?");
+
+/***/ }),
+
+/***/ "react":
+/*!************************!*\
+  !*** external "react" ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = require(\"react\");\n\n//# sourceURL=webpack:///external_%22react%22?");
+
+/***/ }),
+
+/***/ "react-dom/server":
+/*!***********************************!*\
+  !*** external "react-dom/server" ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("module.exports = require(\"react-dom/server\");\n\n//# sourceURL=webpack:///external_%22react-dom/server%22?");
 
 /***/ })
 

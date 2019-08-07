@@ -41,6 +41,7 @@
 import React from 'react';
 import Home from './Home';
 
-export default () => {
+const App = () => {
   return <Home name='Alligator' />;
 };
+export default App;
