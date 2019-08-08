@@ -1,53 +1,33 @@
-import path from 'path';
-import fs from 'fs';
+const express = require('express');
+const bodyParser = require('body-parser');
 
-import React from 'react';
-import express from 'express';
-import ReactDOMServer from 'react-dom/server';
-
-import App from '../App';
-
-const PORT = process.env.PORT || 3006;
 const app = express();
+const port = process.env.PORT || 5000;
 
-app.use(express.static(path.resolve(__dirname, '..', '..', 'build')));
-// app.use(express.static('./build'));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
-app.get('/*', (req, res) => {
-  // console.log(req);
-  // const indexFile = path.resolve(__dirname, 'build', 'index.html');
-  // fs.readFile(indexFile, 'utf8', (err, data) => {
-  //   if (err) {
-  //     console.error('Something went wrong:', err);
-  //     return res.status(500).send('Oops, better luck next time!');
-  //   }
+// Routes
+require('./routes/projects')(app);
+require('./routes/skills')(app);
+require('./routes/calltoactions')(app);
+require('./routes/send')(app);
 
-  //   return res.send(
-  //     data.replace('<div id="root"></div>', `<div id="root">${app}</div>`)
-  //   );
-  // });
-  const filePath = path.resolve(__dirname, '..', '..', 'build', 'index.html');
+if (process.env.NODE_ENV === 'production') {
+  //Express will serve up production assets
+  app.use(express.static('../../build'));
 
-  fs.readFile(filePath, 'utf8', (err, htmlData) => {
-    if (err) {
-      console.error('read err', err);
-      return res.status(404).end();
-    }
-    const context = {};
-    const markup = ReactDOMServer.renderToString(<App />);
-
-    if (context.url) {
-      res.redirect(301, context.url);
-    } else {
-      const RenderedApp = htmlData.replace(
-        '<div id="root"></div>',
-        `<div id="root">${markup}</div>`
-      );
-      res.send(RenderedApp);
-    }
+  //Express will serve up the index.html file
+  //if it doesn't recognize the route
+  const path = require('path');
+  app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, '../..', 'build', 'index.html'));
   });
+}
+// Error handling function
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).send(`Red alert!: ${err.stack}`);
 });
 
-app.listen(PORT, () => {
-  console.log(`😎 Server is listening on port ${PORT}`);
-});
+app.listen(port, () => console.log(`Server started on port ${port}`));
