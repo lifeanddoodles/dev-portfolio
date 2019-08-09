@@ -5,8 +5,12 @@
   "main": "index.js",
   "scripts": {
     "start": "node ./src/server",
+    "server": "nodemon ./src/server",
     "client": "react-scripts start",
-    "dev": "concurrently \"npm run start\" \"npm run client\"",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "build:client": "react-scripts build",
+    "build:server": "NODE_ENV=production ./node_modules/.bin/webpack --config webpack.server.js",
+    "build": "npm-run-all --parallel build:*",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },

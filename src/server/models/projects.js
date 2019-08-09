@@ -4,18 +4,23 @@ module.exports = [
     creativeItemType: `WebSite`,
     name: `Twirly Whiskers`,
     description: {
-      short: `This is a personal project, where I'm testing Schema markup for SEO purposes.`,
+      short: `This is a personal project. A custom WordPress theme where I'm integrating Schema markup and testing for SEO purposes.`,
       long: [
-        `I was tasked with redesigning the front-facing website. Objectives were: improved maintainability, mobile responsiveness, and modernizing the look of the site while retaining it’s original theme and feel.`,
-        `Because the previous site had been built by an inexperienced developer it was missing many best practices. Therefore, the front end was entirely rebuilt from scratch. New additions included BEM and functional programming.`,
-        `Architecture`,
-        `The folder naming convention was component and/or action completed. For example: insert/ribbon-banner/news/blog-post.asp refers to an ASP insertion of a thin blog-post component. Taking advantage of the import ability in SCSS, the naming convention was carried over to the styling sheets.`,
-        `Images also shared a similar naming convention. This folder structure gave the developer a hierarchy to follow as well and partitioned data into small maintainable pieces.`,
-        `Bootstrap and third-party JavaScript libraries were removed with the exception of jQuery.`,
-        `CSS Styling`,
-        `The next object was to create a styling structure that would allow for CSS styling that could be continuously updated without tying down global elements. This was done through the Block Element Modifier styling methodology a.k.a. BEM. This methodology allows for styling to only affect scored classes.`,
-        `JQuery Rewrite`,
-        `New JavaScript code was writing with cleaner, more maintainable, and functional. Removal of additional 3rd party libraries including jQuery UI and Timeline.js were replaced with custom solution.`
+        {
+          text: `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad repudiandae nostrum, alias quod nobis corporis consectetur doloribus vitae fugit suscipit expedita eaque sapiente minima nesciunt quisquam laborum molestias pariatur dolorum?`,
+          selector: `p`,
+          class: `title`
+        },
+        {
+          text: `Subheading`,
+          selector: `h2`,
+          class: `title`
+        },
+        {
+          text: `Rem aperiam consectetur magnam consequuntur ipsam doloribus fugiat fuga dignissimos non expedita? Quas veniam repellendus eligendi magnam voluptas porro! Ullam optio numquam quasi libero in architecto minus. Natus autem ex vitae, impedit voluptas ullam quos nostrum reprehenderit quaerat omnis laborum qui hic molestiae libero quisquam. Voluptates, nostrum?`,
+          selector: `p`,
+          class: `title`
+        }
       ]
     },
     image: {
@@ -50,18 +55,23 @@ module.exports = [
     creativeItemType: `WebSite`,
     name: `C&C Drywall`,
     description: {
-      short: `My job consisted of converting the mockups provided to a fully functioning website.`,
+      short: `My job consisted of converting the mockups provided to a fully functioning website. This was contract work for a small agency.`,
       long: [
-        `I was tasked with redesigning the front-facing website. Objectives were: improved maintainability, mobile responsiveness, and modernizing the look of the site while retaining it’s original theme and feel.`,
-        `Because the previous site had been built by an inexperienced developer it was missing many best practices. Therefore, the front end was entirely rebuilt from scratch. New additions included BEM and functional programming.`,
-        `Architecture`,
-        `The folder naming convention was component and/or action completed. For example: insert/ribbon-banner/news/blog-post.asp refers to an ASP insertion of a thin blog-post component. Taking advantage of the import ability in SCSS, the naming convention was carried over to the styling sheets.`,
-        `Images also shared a similar naming convention. This folder structure gave the developer a hierarchy to follow as well and partitioned data into small maintainable pieces.`,
-        `Bootstrap and third-party JavaScript libraries were removed with the exception of jQuery.`,
-        `CSS Styling`,
-        `The next object was to create a styling structure that would allow for CSS styling that could be continuously updated without tying down global elements. This was done through the Block Element Modifier styling methodology a.k.a. BEM. This methodology allows for styling to only affect scored classes.`,
-        `JQuery Rewrite`,
-        `New JavaScript code was writing with cleaner, more maintainable, and functional. Removal of additional 3rd party libraries including jQuery UI and Timeline.js were replaced with custom solution.`
+        {
+          text: `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad repudiandae nostrum, alias quod nobis corporis consectetur doloribus vitae fugit suscipit expedita eaque sapiente minima nesciunt quisquam laborum molestias pariatur dolorum?`,
+          selector: `p`,
+          class: `title`
+        },
+        {
+          text: `Subheading`,
+          selector: `h2`,
+          class: `title`
+        },
+        {
+          text: `Rem aperiam consectetur magnam consequuntur ipsam doloribus fugiat fuga dignissimos non expedita? Quas veniam repellendus eligendi magnam voluptas porro! Ullam optio numquam quasi libero in architecto minus. Natus autem ex vitae, impedit voluptas ullam quos nostrum reprehenderit quaerat omnis laborum qui hic molestiae libero quisquam. Voluptates, nostrum?`,
+          selector: `p`,
+          class: `title`
+        }
       ]
     },
     image: {
@@ -90,19 +100,8 @@ module.exports = [
     creativeItemType: `WebSite`,
     name: `Alex DVM`,
     description: {
-      short: `I was tasked with redesigning the website to match the main company's theme.`,
-      long: [
-        `I was tasked with redesigning the front-facing website. Objectives were: improved maintainability, mobile responsiveness, and modernizing the look of the site while retaining it’s original theme and feel.`,
-        `Because the previous site had been built by an inexperienced developer it was missing many best practices. Therefore, the front end was entirely rebuilt from scratch. New additions included BEM and functional programming.`,
-        `Architecture`,
-        `The folder naming convention was component and/or action completed. For example: insert/ribbon-banner/news/blog-post.asp refers to an ASP insertion of a thin blog-post component. Taking advantage of the import ability in SCSS, the naming convention was carried over to the styling sheets.`,
-        `Images also shared a similar naming convention. This folder structure gave the developer a hierarchy to follow as well and partitioned data into small maintainable pieces.`,
-        `Bootstrap and third-party JavaScript libraries were removed with the exception of jQuery.`,
-        `CSS Styling`,
-        `The next object was to create a styling structure that would allow for CSS styling that could be continuously updated without tying down global elements. This was done through the Block Element Modifier styling methodology a.k.a. BEM. This methodology allows for styling to only affect scored classes.`,
-        `JQuery Rewrite`,
-        `New JavaScript code was writing with cleaner, more maintainable, and functional. Removal of additional 3rd party libraries including jQuery UI and Timeline.js were replaced with custom solution.`
-      ]
+      short: `I was tasked with redesigning the website to match the main company's theme. This was contract work for a small agency.`,
+      long: [``]
     },
     image: {
       thumbnail: `https://via.placeholder.com/280x140`,
