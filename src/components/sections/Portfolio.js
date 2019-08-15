@@ -6,6 +6,7 @@ function Portfolio(props) {
     <Project
       key={project.id}
       name={project.name}
+      creativeItemType={project.creativeItemType}
       description={project.description}
       client={project.client}
       image={project.image}

@@ -24,8 +24,8 @@ module.exports = [
       ]
     },
     image: {
-      thumbnail: `https://via.placeholder.com/280x140`,
-      large: `https://via.placeholder.com/600x240`
+      thumbnail: `/images/portfolio/twirly-whiskers-thumb.jpg`,
+      large: `/images/portfolio/twirly-whiskers.jpg`
     },
     url: {
       codeUrl: ``,
@@ -75,8 +75,8 @@ module.exports = [
       ]
     },
     image: {
-      thumbnail: `https://via.placeholder.com/280x140`,
-      large: `https://via.placeholder.com/600x240`
+      thumbnail: `/images/portfolio/cc-drywall-thumb.jpg`,
+      large: `/images/portfolio/cc-drywall.jpg`
     },
     url: {
       codeUrl: ``,
@@ -104,8 +104,8 @@ module.exports = [
       long: [``]
     },
     image: {
-      thumbnail: `https://via.placeholder.com/280x140`,
-      large: `https://via.placeholder.com/600x240`
+      thumbnail: `/images/portfolio/alex-dvm-thumb.jpg`,
+      large: `/images/portfolio/alex-dvm.jpg`
     },
     url: {
       codeUrl: ``,

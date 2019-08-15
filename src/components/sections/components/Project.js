@@ -9,14 +9,16 @@ function Project(props) {
       <div
         className='card project'
         itemScope
-        itemType='https://schema.org/CreativeWork'
+        itemType={'https://schema.org/' + props.creativeItemType}
       >
-        <img
-          className='card-img'
-          src='https://via.placeholder.com/480x240'
-          alt=''
-          itemProp='image'
-        />
+        <Link to={props.url.projectUrl} target='_blank'>
+          <img
+            className='card-img'
+            src={props.image.large}
+            alt=''
+            itemProp='image'
+          />
+        </Link>
         <div className='card-body'>
           <h3 className='card-title' itemProp='name'>
             {props.name}
@@ -34,6 +36,7 @@ function Project(props) {
             to={props.url.projectUrl}
             className='btn btn-primary card-link'
             itemProp='url'
+            target='_blank'
           >
             <FontAwesomeIcon icon='eye' />
             View Project
