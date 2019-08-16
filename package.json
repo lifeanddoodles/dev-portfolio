@@ -78,6 +78,9 @@
     "webpack-cli": "^3.3.6",
     "webpack-node-externals": "^1.7.2"
   },
+  "engines": {
+    "node": "10.x"
+  },
   "homepage": "https://lifeanddoodles.github.io/dev-portfolio",
   "proxy": "http://localhost:5000"
 }
