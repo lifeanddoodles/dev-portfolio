@@ -33,7 +33,7 @@ module.exports = {
   backEnd: {
     id: `001`,
     name: `Back-End Development`,
-    description: `Since I like to dabble in back-end work as well, I am familiar with saving data, processing requests, either to a database or an API.`,
+    description: `Since I like to dabble in back-end work as well, I am familiar with saving data and processing requests, either to a database or an API.`,
     skills: [
       {
         icon: `node`,
