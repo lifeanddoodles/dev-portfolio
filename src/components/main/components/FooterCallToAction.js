@@ -4,22 +4,24 @@ import { Link } from 'react-router-dom';
 function FooterCallToAction(props) {
   return (
     <Fragment>
-      <Link
+      <a
         className='icon-link'
-        to='https://github.com/lifeanddoodles'
+        href='https://github.com/lifeanddoodles'
         target='_blank'
+        rel='noopener noreferrer'
         aria-label='Visit GitHub profile'
       >
         <i className={`fab fa-github icon`} title='Github' />
-      </Link>
-      <Link
+      </a>
+      <a
         className='icon-link'
-        to='https://www.linkedin.com/in/sandralvargas/'
+        href='https://www.linkedin.com/in/sandralvargas/'
         target='_blank'
+        rel='noopener noreferrer'
         aria-label='Visit LinkedIn profile'
       >
         <i className={`fab fa-linkedin icon`} title='LinkedIn' />
-      </Link>
+      </a>
     </Fragment>
   );
 }

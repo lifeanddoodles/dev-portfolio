@@ -1,5 +1,4 @@
 import React, { Fragment } from 'react';
-import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function Project(props) {
@@ -11,14 +10,18 @@ function Project(props) {
         itemScope
         itemType={'https://schema.org/' + props.creativeItemType}
       >
-        <Link to={props.url.projectUrl} target='_blank'>
+        <a
+          href={props.url.projectUrl}
+          target='_blank'
+          rel='noopener noreferrer'
+        >
           <img
             className='card-img'
             src={props.image.large}
             alt=''
             itemProp='image'
           />
-        </Link>
+        </a>
         <div className='card-body'>
           <h3 className='card-title' itemProp='name'>
             {props.name}
@@ -32,17 +35,18 @@ function Project(props) {
         </div>
 
         <div className='btn-group card-body' role='navigation'>
-          <Link
-            to={props.url.projectUrl}
+          <a
+            href={props.url.projectUrl}
             className='btn btn-primary card-link'
             itemProp='url'
             target='_blank'
+            rel='noopener noreferrer'
           >
             <FontAwesomeIcon icon='eye' />
             View Project
-          </Link>
-          <Link
-            to={props.url.codeUrl}
+          </a>
+          <a
+            href={props.url.codeUrl}
             className={
               'btn btn-primary card-link' + (codeUnavailable ? ' disabled' : '')
             }
@@ -50,7 +54,7 @@ function Project(props) {
           >
             <FontAwesomeIcon icon={['fab', 'github']} />
             View Code
-          </Link>
+          </a>
         </div>
       </div>
     </Fragment>
