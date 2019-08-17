@@ -1,7 +1,6 @@
 import React from 'react';
 import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 import Home from './pages/Home';
-import ThankYou from './pages/ThankYou';
 import ErrorPage from './pages/ErrorPage';
 import Header from './components/main/Header';
 import Footer from './components/main/Footer';
@@ -26,7 +25,6 @@ function App() {
           render={({ location }) => (
             <Switch location={location}>
               <Route exact path='/' component={Home} />
-              <Route path='/thank-you' component={ThankYou} />
               <Route component={ErrorPage} />
             </Switch>
           )}
