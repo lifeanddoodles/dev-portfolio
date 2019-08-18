@@ -1,9 +1,12 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component, Fragment, Suspense } from 'react';
 import axios from 'axios';
-import Hero from '../components/sections/Hero';
-import Portfolio from '../components/sections/Portfolio';
-import ExpertiseAreas from '../components/sections/ExpertiseAreas';
-import Contact from '../components/sections/Contact';
+
+const Hero = React.lazy(() => import('../components/sections/Hero'));
+const Portfolio = React.lazy(() => import('../components/sections/Portfolio'));
+const ExpertiseAreas = React.lazy(() =>
+  import('../components/sections/ExpertiseAreas')
+);
+const Contact = React.lazy(() => import('../components/sections/Contact'));
 
 class Home extends Component {
   state = {
@@ -36,10 +39,12 @@ class Home extends Component {
   render() {
     return (
       <Fragment>
-        <Hero callToActions={this.state.calltoactions} />
-        <Portfolio projects={this.state.projects} />
-        <ExpertiseAreas expertise={this.state.expertise} />
-        <Contact />
+        <Suspense fallback={<div>Loading...</div>}>
+          <Hero callToActions={this.state.calltoactions} />
+          <Portfolio projects={this.state.projects} />
+          <ExpertiseAreas expertise={this.state.expertise} />
+          <Contact />
+        </Suspense>
       </Fragment>
     );
   }

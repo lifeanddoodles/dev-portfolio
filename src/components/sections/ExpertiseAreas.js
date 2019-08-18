@@ -1,5 +1,6 @@
-import React from 'react';
-import Expertise from './components/Expertise';
+import React, { Suspense } from 'react';
+
+const Expertise = React.lazy(() => import('./components/Expertise'));
 
 function ExpertiseAreas(props) {
   const expertiseAreasObject = Object.values(props.expertise);
@@ -13,7 +14,7 @@ function ExpertiseAreas(props) {
   ));
   return (
     <section id='skills' className='mb-0 py-0'>
-      {expertiseAreas}
+      <Suspense fallback={<div>Loading...</div>}>{expertiseAreas}</Suspense>
     </section>
   );
 }
