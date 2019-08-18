@@ -1,16 +1,38 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import { Alert, Button, Form, FormGroup, Label, Input } from 'reactstrap';
+import {
+  Alert,
+  Button,
+  Form,
+  FormFeedback,
+  FormGroup,
+  Label,
+  Input
+} from 'reactstrap';
 
 const initialState = {
   alert: null,
   name: '',
   email: '',
-  message: ''
+  message: '',
+  validate: {
+    emailState: ''
+  }
 };
 
 class Contact extends Component {
   state = initialState;
+
+  validateEmail = event => {
+    const emailRex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    const { validate } = this.state;
+    if (emailRex.test(event.target.value)) {
+      validate.emailState = 'has-success';
+    } else {
+      validate.emailState = 'has-danger';
+    }
+    this.setState({ validate });
+  };
 
   handleChange = event => {
     const {
@@ -47,9 +69,18 @@ class Contact extends Component {
       .post('/send', { email, message, name })
       .then(() => this.setState(initialState))
       .then(() =>
-        this.handleAlert({ status: 'success', message: 'Message sent fam' })
+        this.handleAlert({
+          status: 'success',
+          message: 'Message sent. Will get back to you soon.'
+        })
       )
-      .catch(() => this.handleAlert({ status: 'danger', message: 'dang' }));
+      .catch(() =>
+        this.handleAlert({
+          status: 'danger',
+          message:
+            'Message not sent. Please check all fields are filled and valid.'
+        })
+      );
   };
 
   render() {
@@ -59,7 +90,6 @@ class Contact extends Component {
       <section id='contact' className='bg-accent fullwidth'>
         <div className='container'>
           <h1>Reach out</h1>
-          {/* {msg} */}
           {this.renderAlert()}
           <Form id='contact-form' onSubmit={this.handleSubmit}>
             <div className='form-row'>
@@ -72,6 +102,7 @@ class Contact extends Component {
                   id='name'
                   onChange={this.handleChange}
                   value={name}
+                  required
                 />
               </FormGroup>
               <FormGroup className=' col-md-6'>
@@ -81,9 +112,16 @@ class Contact extends Component {
                   className='form-control'
                   name='email'
                   id='email'
-                  onChange={this.handleChange}
+                  valid={this.state.validate.emailState === 'has-success'}
+                  invalid={this.state.validate.emailState === 'has-danger'}
+                  onChange={event => {
+                    this.validateEmail(event);
+                    this.handleChange(event);
+                  }}
                   value={email}
+                  required
                 />
+                <FormFeedback>Use a valid email.</FormFeedback>
               </FormGroup>
             </div>
             <FormGroup className=''>
@@ -95,6 +133,7 @@ class Contact extends Component {
                 id='message'
                 onChange={this.handleChange}
                 value={message}
+                required
               />
             </FormGroup>
             <Button color='primary' className='btn btn-lg' type='submit'>

@@ -1,8 +1,26 @@
 var nodemailer = require('nodemailer');
 const creds = require('../config/config');
+const { check, sanitize, validationResult } = require('express-validator');
 
 module.exports = app => {
-  app.post('/send', (req, res) => {
+  app.post('/send', async (req, res, next) => {
+    await check('name', 'Name cannot be blank')
+      .not()
+      .isEmpty()
+      .withMessage('Name cannot be blank')
+      .run(req);
+    await check('email', 'Email is not valid')
+      .isEmail()
+      .run(req);
+    await check('message', 'Message cannot be empty.')
+      .not()
+      .isEmpty()
+      .run(req);
+
+    const result = validationResult(req);
+    if (!result.isEmpty()) {
+      return res.status(422).json({ errors: result.array() });
+    }
     const output = `
       <p>You have a new contact request</p>
       <h3>Contact Details</h3>
@@ -39,9 +57,9 @@ module.exports = app => {
 
     // setup email data with unicode symbols
     let mailOptions = {
-      from: '"Nodemailer Contact" <your@email.com>', // sender address
+      from: '"Dev Portfolio" <sandra@lifeanddoodles.com>', // sender address
       to: 'nelda.bernhard@ethereal.email', // list of receivers
-      subject: 'Node Contact Request', // Subject line
+      subject: 'Contact Request', // Subject line
       text: outputPlainText, // plain text body
       html: output // html body
     };
