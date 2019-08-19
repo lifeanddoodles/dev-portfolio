@@ -26,7 +26,7 @@ module.exports = {
       icon: `download`,
       ariaLabel: `Download Resume`,
       name: `Resume`,
-      url: `/resume.pdf`
+      url: `/docs/sandra-vargas-front-end-resume.pdf`
     }
   ]
 };
