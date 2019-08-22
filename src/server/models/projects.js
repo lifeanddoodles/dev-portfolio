@@ -38,17 +38,15 @@ module.exports = [
       `Theme Development`,
       `Plugin Development`
     ],
-    keywords: [
+    stack: [
       `WordPress`,
       `HTML5`,
       `CSS3`,
       `Schema Markup`,
       `JavaScript`,
-      `jQuery`,
-      `Custom Taxonomy`,
-      `Custom Post Type`,
-      `Custom Template`
-    ]
+      `jQuery`
+    ],
+    keywords: [`Custom Taxonomy`, `Custom Post Type`, `Custom Template`]
   },
   {
     id: `002`,
@@ -58,19 +56,14 @@ module.exports = [
       short: `My job consisted of converting the mockups provided to a fully functioning website. This was contract work for a small agency.`,
       long: [
         {
-          text: `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad repudiandae nostrum, alias quod nobis corporis consectetur doloribus vitae fugit suscipit expedita eaque sapiente minima nesciunt quisquam laborum molestias pariatur dolorum?`,
+          text: `I was handed a design they had already commissioned elsewhere as a starting point. The client wanted a big top header with his logo, contact info, and credentials.`,
           selector: `p`,
-          class: `title`
+          class: ``
         },
         {
-          text: `Subheading`,
-          selector: `h2`,
-          class: `title`
-        },
-        {
-          text: `Rem aperiam consectetur magnam consequuntur ipsam doloribus fugiat fuga dignissimos non expedita? Quas veniam repellendus eligendi magnam voluptas porro! Ullam optio numquam quasi libero in architecto minus. Natus autem ex vitae, impedit voluptas ullam quos nostrum reprehenderit quaerat omnis laborum qui hic molestiae libero quisquam. Voluptates, nostrum?`,
+          text: `Another of his priorities was to showcase the projects they'd worked on for different industries, so I created a custom taxonomy for the industries so they could showcase and maintain their portfolio in a more efficient way.`,
           selector: `p`,
-          class: `title`
+          class: ``
         }
       ]
     },
@@ -84,16 +77,8 @@ module.exports = [
     },
     client: `C&C Drywall`,
     services: [`Web Development`, `Theme Development`, `Plugin Development`],
-    keywords: [
-      `WordPress`,
-      `HTML5`,
-      `CSS3`,
-      `JavaScript`,
-      `jQuery`,
-      `Custom Taxonomy`,
-      `Custom Post Type`,
-      `Custom Template`
-    ]
+    stack: [`WordPress`, `HTML5`, `CSS3`, `JavaScript`, `jQuery`],
+    keywords: [`Custom Taxonomy`, `Custom Post Type`, `Custom Template`]
   },
   {
     id: `003`,
@@ -101,7 +86,18 @@ module.exports = [
     name: `Alex DVM`,
     description: {
       short: `I was tasked with redesigning the website to match the main company's theme. This was contract work for a small agency.`,
-      long: [``]
+      long: [
+        {
+          text: `The owner wanted to rebuild the website to match the branding of her other location, which she had acquired recently.`,
+          selector: `p`,
+          class: ``
+        },
+        {
+          text: `Had to take from the logo, name, color scheme and design from the full service hospital and put that onto the mobile services website.`,
+          selector: `p`,
+          class: ``
+        }
+      ]
     },
     image: {
       thumbnail: `/images/portfolio/alex-dvm-thumb.jpg`,
@@ -113,15 +109,7 @@ module.exports = [
     },
     client: `Alex DVM`,
     services: [`Web Development`, `Theme Development`, `Plugin Development`],
-    keywords: [
-      `WordPress`,
-      `HTML5`,
-      `CSS3`,
-      `JavaScript`,
-      `jQuery`,
-      `Custom Taxonomy`,
-      `Custom Post Type`,
-      `Custom Template`
-    ]
+    stack: [`WordPress`, `HTML5`, `CSS3`, `JavaScript`, `jQuery`],
+    keywords: [`Custom Taxonomy`, `Custom Post Type`, `Custom Template`]
   }
 ];

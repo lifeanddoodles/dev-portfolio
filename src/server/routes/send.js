@@ -1,6 +1,6 @@
 var nodemailer = require('nodemailer');
 const creds = require('../config/config');
-const { check, sanitize, validationResult } = require('express-validator');
+const { check, validationResult } = require('express-validator');
 
 module.exports = app => {
   app.post('/send', async (req, res, next) => {
@@ -41,27 +41,53 @@ module.exports = app => {
     ${req.body.message}
     `;
 
-    // create reusable transporter object using the default SMTP transport
-    let transporter = nodemailer.createTransport({
-      host: 'smtp.ethereal.email',
-      port: 587,
-      secure: false, // true for 465, false for other ports
-      auth: {
-        user: creds.USER,
-        pass: creds.PASS
-      },
-      tls: {
-        rejectUnauthorized: false
+    const fetchConfig = () => {
+      if (process.env.NODE_ENV === 'development') {
+        return {
+          auth: {
+            user: creds.ETHEREAL_EMAIL,
+            pass: creds.ETHEREAL_PASS
+          },
+          host: creds.ETHEREAL_EMAIL_SERVER,
+          port: creds.ETHEREAL_EMAIL_PORT,
+          secure: creds.ETHEREAL_EMAIL_SECURE,
+          tls: {
+            rejectUnauthorized: false
+          }
+
+          // auth: {
+          //   user: creds.PROD_EMAIL,
+          //   pass: creds.PROD_PASS
+          // },
+          // service: 'gmail'
+          // host: creds.PROD_EMAIL_SERVER,
+          // port: creds.PROD_EMAIL_PORT,
+          // secure: creds.PROD_EMAIL_SECURE,
+          // tls: {
+          //   rejectUnauthorized: false
+          // }
+        };
       }
-    });
+
+      return {
+        auth: {
+          user: creds.PROD_EMAIL,
+          pass: creds.PROD_PASS
+        },
+        service: 'gmail'
+      };
+    };
+
+    // create reusable transporter object using the default SMTP transport
+    let transporter = nodemailer.createTransport(fetchConfig());
 
     // setup email data with unicode symbols
     let mailOptions = {
-      from: '"Dev Portfolio" <sandra@lifeanddoodles.com>', // sender address
-      to: 'nelda.bernhard@ethereal.email', // list of receivers
-      subject: 'Contact Request', // Subject line
-      text: outputPlainText, // plain text body
-      html: output // html body
+      from: '"Portfolio" <sandra@lifeanddoodles.com>',
+      to: '<sandravargasgro@gmail.com>',
+      subject: 'Contact Request',
+      text: outputPlainText,
+      html: output
     };
 
     // send mail with defined transport object
@@ -70,7 +96,7 @@ module.exports = app => {
         return res.sendStatus(401);
       }
       console.log('Message sent: %s', info.messageId);
-      console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
+      // console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
       res.sendStatus(200);
     });
   });

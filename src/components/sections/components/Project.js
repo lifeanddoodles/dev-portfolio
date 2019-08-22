@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function Project(props) {
   const codeUnavailable = props.url.codeUrl === '';
+
   return (
     <Fragment>
       <div
@@ -33,7 +34,6 @@ function Project(props) {
             {props.client}
           </p>
         </div>
-
         <div className='btn-group card-body' role='navigation'>
           <a
             href={props.url.projectUrl}
