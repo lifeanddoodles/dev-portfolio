@@ -1,10 +1,13 @@
 const express = require('express');
+const compression = require('compression');
 const bodyParser = require('body-parser');
 const path = require('path');
 
 const app = express();
 const port = process.env.PORT || 5000;
-
+// Support Gzip
+app.use(compression());
+// Support post requests with body data
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
